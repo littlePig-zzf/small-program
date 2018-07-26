@@ -1,0 +1,9 @@
+<!--pages/user/contact/index.wxml-->
+<view class="contact-module">
+  <!-- <head-module title="联系我们"></head-module> -->
+  <view class="code">
+    <image src="{{contact.qrcode}}" alt="" mode="widthFix"/>
+  </view>
+  <view class="wechat primary-text-color fz15">客服微信号：{{contact.id}}</view>
+  <view class="info fz12">长按识别上方二维码，添加客服小漫为好友</view>
+</view>

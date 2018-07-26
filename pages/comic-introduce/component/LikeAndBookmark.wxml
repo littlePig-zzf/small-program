@@ -1,0 +1,9 @@
+<!--pages/book-introduce/LikeAndBookmark.wxml-->
+<view class='tool-default-set {{comicDetail.is_liked ? "greyBg" : "theme-bg-color"}}' data-index="{{0}}" data-types="is_liked" bindtap='toggleLike'>
+  <image class='good-icon' src="/images/goodw.png" alt="" mode="widthFix"/>
+  <text class='icon-text'>{{comicDetail.is_liked ? '已赞' : '点赞'}}</text>
+</view>
+<view class='tool-default-set {{comicDetail.is_bookmarked ? "greyBg" : "theme-bg-color"}}' data-index="{{1}}" data-types="is_bookmarked" bindtap='toggleBookmark'>
+  <image class='store-icon' src="/images/store.png" alt="" mode="widthFix"/>
+  <text class='icon-text'>{{comicDetail.is_bookmarked ? '已收藏' : '收藏'}}</text>
+</view> 

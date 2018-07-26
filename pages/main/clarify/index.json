@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "search-header": "/component/SearchHeader/index",
+    "no-data": "/component/NoData/index"
+  }
+}

@@ -1,0 +1,49 @@
+<!--pages/user/pay-page/index.wxml-->
+<view class="pay-module">
+  <!-- <head-module title="我要充值"></head-module> -->
+  <view class="pay-cont" wx:if="{{topupData.topup.length}}">
+    <view class="vip-user fz16" wx:if="{{topupData.user.vip_expire_at}}">
+      <image src="/images/vip-icon.png" alt="" mode="widthFix"/>
+      VIP用户，过期时间：<text class='tag-color'>{{topupData.user.vip_expire_at}}</text>
+    </view>
+    <view class="remain-coin fz16 {{topupData.user.vip_expire_at ? 'noPadding' : ''}}]" wx:if="{{!topupData.chapter || topupData.user.money > topupData.chapter.money}}">剩余金额：<text class='tag-color'>{{topupData.user.money}}</text> 阅币</view>
+    <view wx:else class="remain-coin fz16">阅币金额不足 <text>\n</text>阅读本章需要<text class='tag-color'> {{topupData.chapter.money}}</text> 阅币，当前余额：<text class='tag-color'>{{topupData.user.money}}</text> 阅币</view>
+    <!-- <form ref="Form" action="$api.user.order.url" method="post"> -->
+    <!-- <form bindsubmit="formSubmit"> -->
+      <!-- <input type="hidden" name="_token" :value="token"> -->
+      <view class="pay-item">
+        <block wx:for="{{topupData.topup}}" wx:key="{{index}}">
+          <view wx:if="{{item.type === 0 || item.type === 1}}" data-index="{{index}}" class="pay-item-cont {{curType === index ? 'active': ''}}" bindtap='selectPay'>
+            <image hidden="{{item.type !== 1}}" class="icon" src="/images/recommend.png" alt="" mode="widthFix"/>
+            <view class="money fz18">{{item.pay_money}}.00元</view>
+            <view class="fz14">{{item.title}}</view>
+            <view class="fz12 info">{{item.sub_title}}</view>
+          </view>
+          <view wx:if="{{item.type === 2 || item.type === 3}}" data-index="{{index}}" class="pay-item-cont {{curType === index ? 'active' : ''}}" bindtap='selectPay'>
+            <image hidden="{{item.type !== 3}}" class="icon vip" src="/images/vip.png" alt="" mode="widthFix"/>
+            <view class="money fz16"><image class="vip-icon" src="/images/vip-icon.png" alt="" mode="widthFix"/><text>{{item.title}}</text></view>
+            <view class="fz12 info">{{item.sub_title}}</view>
+          </view>
+        </block>
+      </view>
+      <!-- <input type="hidden" name="topup_id" v-model="topup_id"> -->
+      <!-- <input type="hidden" name="hash" v-model="hash"> -->
+      <button type="primary">确认充值</button>
+    <!-- </form>  -->
+    <view class="pay-info">
+      <view class="title">充值说明</view>
+      <view class="info">
+        1：漫画，是一种艺术形式，是用简单而夸张的手法来描绘生
+        活或时事的图画。一般运用变形、比喻、象征、暗示、影射的
+        方法。构成幽默诙谐的画面或画面组，以取得讽刺或歌颂的效
+        果。
+      </view>
+      <view class="info">
+        2:漫画作为绘画作品经历了一个发展过程，从最初作为少数
+        人的兴趣爱好，已成为人们的普遍读物，更是学生的最爱，并
+        成为了漫画控。虽然才刚蓬勃的漫画，却早在800年前，日本
+        已有了漫画的开始。近年的作品主导一般为日本漫画和美国漫画。
+      </view>
+    </view>
+  </view>
+</view>

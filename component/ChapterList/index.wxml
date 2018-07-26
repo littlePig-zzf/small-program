@@ -1,0 +1,7 @@
+<view class="subscribe-module">
+  <view wx:for="{{chapterData}}" wx:key="index" id="{{item.id}}" class="subscirbe-item" bindtap="subscribeFun">
+    <text decode="{{true}}">第{{item.no}}话 &nbsp;&nbsp; {{item.title}} &nbsp;&nbsp;</text>
+    <image wx:if="{{item.money}}" src="/images/pink.png" class="moneyIcon" mode="widthFix"/>
+    {{item.money || ''}}
+  </view>
+</view>

@@ -1,0 +1,13 @@
+<!--component/SearchHeader/index.wxml-->
+<view class="search-header">
+  <input type="text"
+    class="search-input"
+    placeholder="{{placeholdertxt}}"
+    disabled="{{disabled}}"
+    data-item="search"
+    value="{{searchParams}}"
+    auto-focus="{{isAutoFocus}}"
+    bindconfirm="search"
+    bindtap="lintTo"/>
+  <image class="search-icon" mode="widthFix" src="/images/search.png" alt="" />
+</view>

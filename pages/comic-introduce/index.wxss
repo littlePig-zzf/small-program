@@ -1,0 +1,163 @@
+.book-introduce {
+  min-height: 100vh;
+  background: #f5f5f5;
+}
+.book-poster {
+  position: relative;
+  min-height: 418rpx;
+  font-size: 0;
+}
+.book-poster-img {
+  width: 100%;
+}
+.tips-info {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,.5);
+}
+.tool-box {
+  margin-top: 38rpx;
+  padding: 0 53.3333rpx;
+}
+.tool-box .home {
+  width: 53.3333rpx;
+  height: 53.3333rpx;
+  text-align: center;
+  border-radius: 100%;
+  color: #fff;
+}
+.home-icon {
+  width: 15px;
+  height: 15px;
+  vertical-align: middle;
+  padding-top: 5px;
+}
+.book-poster-text {
+  position: relative;
+  height: 78%;
+  box-sizing: border-box;
+  color: #fff;
+}
+.book-poster-text-inner {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 0 53.3333rpx;
+  box-sizing: border-box;
+}
+.book-poster-text .title {
+  font-size: 46rpx;
+}
+.sub-info {
+  margin: 10px 0 12px;
+  overflow: hidden;
+}
+.book-tag {
+  padding: 0 8px;
+  border-radius: 10px;
+  background: #8d8e8e;
+}
+.introduce-cont {
+  background: #fff;
+}
+.introduce-cont .tab-group {
+  display: flex;
+  background: #fff;
+  height: 44px;
+  position: relative;
+  color: #323232;
+  border-bottom: 1px solid #eee;
+}
+.introduce-cont .tab-item {
+  display: block;
+  flex: 1;
+  width: 100%;
+  height: 100%;
+  line-height: 44px;
+  text-align: center;
+}
+.introduce-cont .tab-positionL {
+  left: 50%;
+  right: 0;
+}
+.introduce-cont .tab-positionR {
+  right: 50%;
+  left: 0;
+}
+.introduce-cont .tab-item-transition {
+  transition: right .3s cubic-bezier(.35,0,.25,1) .09s,left .3s cubic-bezier(.35,0,.25,1);
+}
+.introduce-cont .tab-bar {
+  position: absolute;
+  bottom: -1rpx;
+  height: 2px;
+}
+.tab-bar .tab-bar-inner {
+  width: 60px;
+  height: 100%;
+  margin: auto;
+}
+.introduce-cont .cont {
+  color: #666;
+}
+.introduce-cont .cont-item {
+  padding: 53.3333rpx 26.6667rpx 0
+}
+.introduce-cont .grey-bg {
+  width: 100%;
+  height: 50px;
+  background: #f5f5f5;
+}
+.introduce-cont .cont-foot {
+   padding-bottom: 8px; 
+}
+.introduce-cont .read-item {
+  display: inline-block;
+  margin-right: 10px;
+}
+.introduce-cont .icon {
+  width: 15px;
+}
+.introduce-cont .read-item:first-child .icon {
+  height: 15px;  
+}
+.introduce-cont .read-item:last-child .icon {
+  height: 10px;
+}
+.introduce-cont .cont-title {
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+.introduce-cont .detail {
+  display: block;
+  margin-bottom: 15px;
+}
+.introduce-foot {
+  position: fixed;
+  bottom: 0;
+  height: 88rpx;
+  width: 100%;
+  background: #fff;
+  font-size: 0;
+}
+.introduce-foot .foot-item {
+  position: absolute;
+  bottom: 0;
+  display: inline-block;
+  width: 50%;
+  height: 100%;
+  line-height: 88rpx;
+  font-size: 30rpx;
+  text-align: center;
+  color: #323232;
+}
+.foot-item:first-child {
+  left: 0;
+}
+.foot-item.start {
+  right: 0;
+  color: #fff;
+}

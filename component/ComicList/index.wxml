@@ -1,0 +1,31 @@
+<view class="book-list">
+  <view class="list-item"
+    wx:for="{{bookList}}"
+    wx:key="index"
+    id="{{item.id}}"
+    bindtap="goToRead">
+    <view class="head clearfix">
+      <text wx:if="{{showTag}}" class="head-tag">{{item.category_title}}</text>
+      <rich-text class="head-title">{{item.title}}</rich-text>
+      <text class="head-read" decode="{{true}}">阅读 &gt;</text>
+    </view>
+    <image class="list-item-poster" src="{{item.cover}}" alt="{{item.title}}" mode="widthFix"/>
+    <view class="update-info">
+      <view class="update">
+        <image src="/images/new.png" alt="" mode="widthFix"/>
+        <text>更新到第{{item.chapters_num}}话</text>
+      </view>
+      <view class="read-detail" wx:if="{{showDetail}}">
+        <view class='tool-icon'>
+          <image src="/images/good.png" alt="" mode="widthFix"/>
+          <text>{{item.likes}}</text>
+        </view>
+        <view class='tool-icon'>
+          <image src="/images/eye.png" alt="" mode="widthFix"/>
+          <text>{{item.views}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+  <no-data wx:if="{{!hasData}}" content="暂无数据"></no-data>
+</view>

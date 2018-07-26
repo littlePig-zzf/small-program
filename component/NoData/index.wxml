@@ -1,0 +1,5 @@
+<view class="no-data-cont">
+  <view class="no-data">
+    {{content}}
+  </view>
+</view>

@@ -1,0 +1,5 @@
+<!--pages/main/subscribe-buy/index.wxml-->
+<view>
+  <chapter-list id="buy" chapterData="{{allChapterData}}" bindgetDialogData="getDialogData" ></chapter-list>
+  <subscribe-modal hidden="{{isHideModal}}" userInfo="{{dialogData}}"></subscribe-modal>
+</view>

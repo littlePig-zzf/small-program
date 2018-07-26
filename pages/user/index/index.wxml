@@ -1,0 +1,33 @@
+<!--pages/user/index.wxml-->
+<view class="user-module">
+  <view class="user-head-item theme-bg-color">
+    <view class="user-head-img fl">
+      <view class='user-img-box'>
+        <image class='avatar' src="/images/user-img.jpeg" alt="" />
+        <image class='user-vip' wx:if="{{userInfo.vip_expire_at}}" src="/images/user-vip.png" mode="widthFix"></image>
+      </view>
+      <view class='user-head-info'>
+        <view class="username fz16">小漫<image hidden="{{!userInfo.vip_expire_at}}" class="vip-icon" src="/images/vip-icon.png" alt="" /></view>
+        <view class="coin-num fz12"><image src="/images/my6.png" alt="" mode="widthFix"/> {{userInfo.money}}阅币</view>
+      </view>
+    </view>
+    <view class="fr fz14 theme-color sign greyColor">已签到</view>
+  </view>
+  <view class="user-operate">
+    <view class='user-operate-item' wx:for="{{menuList}}" wx:key="index" data-path="{{item.path}}" data-index="{{index}}" bindtap='gotoDetail'>
+      <image class='user-operate-icon' src="/images/my{{index+1}}.png" alt="" mode="widthFix"/>
+      <text class='user-operate-txt'>{{item.title}}</text>
+      <image class='user-more-btn fr' src="/images/my-more.png" mode="widthFix" wx:if="{{!item.types}}"/>
+      <switch class='user-auto-buy fr' checked="{{userInfo.auto_buy_chapter}}" color="#fe7276" bindchange="switchChange" wx:else/>
+    </view>
+  </view>
+  <modal-frame class="modal-box" id="Modal">
+    <view class="dialog-cont">
+      <image src="/images/sign.png" mode="widthFix"/>
+      <view class='sign-txt'>
+        <view class='txt-item'>恭喜你今日签到成功！</view>
+        <view>阅币 + <text class="coin-num theme-color fz12">{{money_change}}</text> </view>
+      </view>
+    </view>
+  </modal-frame>
+</view>

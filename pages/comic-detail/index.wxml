@@ -1,0 +1,43 @@
+<!--pages/read-book/index.wxml-->
+<view class="read-module">
+  <head-bar title="第{{currentNo}}话 {{currentTitle}}" remainNum="{{remain_num}}" showBar="{{showBar}}"></head-bar>
+  <view class="charter-item" wx:for="{{chapters}}" wx:key="{{index}}" data-index="{{index}}" bindtap="showCharpterTips">
+    <block wx:for="{{item.images}}" wx:for-item="cItem" wx:key="{{cIndex*1000}}">
+      <image class='comicImg' src="{{cItem}}" alt="" mode="widthFix" style='width: 100%'/>
+    </block>
+    <view class="first-cont">
+      <Comic-collect-like
+        wx:if="{{comic.chapters.length > 0}}"
+        text-set="text-set"
+        comicDetail="{{comic}}"
+        bindlikeHandle="likeHandle"
+        bindbookmarkHandle="bookmarkHandle"
+      ></Comic-collect-like>
+    </view> 
+  </view>
+  <view class="tips" hidden="{{!showBar}}">
+    <view class="first-cont">
+      <Comic-collect-like
+        wx:if="{{comic.chapters.length > 0}}"
+        text-set="text-set"
+        comicDetail="{{comic}}"
+        bindlikeHandle="likeHandle"
+        bindbookmarkHandle="bookmarkHandle"
+      ></Comic-collect-like>
+    </view>
+    <view class="last-cont">
+      <view class='cont-item' data-type="index" bindtap="lintTo">
+        <image src='/images/left.png' mode="widthFix"></image>
+        首页
+      </view>
+      <view class='cont-item' data-type="dialog" bindtap="lintTo">
+        目录
+      </view>
+      <view class='cont-item'>
+        <text catchtap="nextFun">{{remain_num === 0 ? '无' : '下一话'}}</text>
+        <image src='/images/right.png' mode="widthFix"></image>
+      </view>
+    </view>
+  </view>
+  <subscribe-modal hidden="{{isHideModal}}" userInfo="{{chapters[chapters.length-1]}}"></subscribe-modal>
+</view>

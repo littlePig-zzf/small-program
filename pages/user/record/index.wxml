@@ -1,0 +1,20 @@
+<!--pages/user/record/index.wxml-->
+<view class="record-module">
+  <view class="record-cont">
+    <view class="record-item" wx:for="{{recordData}}" wx:key="index">
+      <view class="user-info">
+        <view class='user-info-left'>
+          <image class="img-set-expend" wx:if="{{operateType === 0}}" src="{{item.comic_cover}}" alt="" mode="widthFix"/>
+          <image class="img-set" wx:else="{{operateType === 1}}" src="/images/record{{item.type}}.png" alt="" mode="widthFix"/>
+        </view>
+        <view class='user-info-right'>
+          <view class="type" wx:if="{{operateType === 1}}">{{item.type === 1 ? '充值' : '签到'}}</view>
+          <view class="type" wx:else>{{item.comic_title}}</view>
+          <view class="time">{{item.created_at}}</view>
+        </view>
+      </view>
+      <view class="right-txt">{{operateType === 1 ? '+' +item.money : item.money}}</view>
+    </view>
+  </view>
+  <no-data content="暂无数据~~" hidden="{{!showNoData}}"></no-data>
+</view>

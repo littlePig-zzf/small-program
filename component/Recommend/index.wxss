@@ -1,0 +1,42 @@
+/* component/HotBook/index.wxss */
+.tab-bg {
+  background: #f5f5f5;
+  height: 50px;
+}
+.tab-scroll {
+  width: 100%;
+  background: #fff;
+}
+.tab-cont {
+  position: relative;
+  height: 40px;
+  display: flex; 
+  flex-direction: row; 
+  font-size: 28rpx;
+  text-align: center;
+  line-height: 40px;
+}
+.tab-item {
+  display: block; 
+  flex: 0 0 107rpx; 
+  color: #666;
+}
+.tab-bar {
+  position: absolute;
+  bottom: 0;
+  height: 2px;
+  display: block;
+  text-align: center;
+  background: transparent;
+  transition: right 0.3s cubic-bezier(0.35, 0, 0.25, 1) 0.09s, left 0.3s cubic-bezier(0.35, 0, 0.25, 1);
+}
+.tab-bar-inner {
+  width: 15px;
+  display: block;
+  background: #fe7276;
+  margin: auto;
+  height: 100%;
+}
+.tab-item.active {
+  color: #fe7276;
+}

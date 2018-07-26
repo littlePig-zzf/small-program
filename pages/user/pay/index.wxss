@@ -1,0 +1,88 @@
+/* pages/user/pay-page/index.wxss */
+.pay-cont {
+  padding: 0 30rpx;
+  text-align: center;
+}
+.remain-coin,
+.vip-user {
+  padding: 40rpx 0;
+}
+.remain-coin.noPadding {
+  padding: 0 0 40rpx;
+  font-size: 28rpx;
+}
+.remain-coin.noPadding>text {
+  color: #666;
+}
+.vip-user{
+  padding-bottom: 20rpx; 
+}
+.vip-user>image {
+  width: 32rpx;
+}
+.pay-item {
+  min-height: 300rpx;
+  text-align: left;
+  font-size: 0;
+}
+.pay-item .pay-item-cont {
+  position: relative;
+  display: inline-block;
+  margin: 0 26rpx 30rpx 0;
+  width: 324.8rpx;
+  height: 213.3333rpx;
+  border: 1px solid #f2f3f2;
+  border-radius: 13.3333rpx;
+  text-align: center;
+}
+.pay-item-cont:nth-child(2n+2) {
+  margin-right: 0;
+  vertical-align: top;
+}
+.pay-item-cont.active {
+  border: 1px solid #f49146;
+}
+.pay-item-cont.active,
+.pay-item-cont.active .coin,
+.pay-item-cont.active .info {
+  color: #f49146;
+}
+.pay-item-cont .money {
+  padding: 32rpx 30rpx 20rpx;
+}
+.icon {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 76.6667rpx;
+  height: auto;
+}
+.info {
+  color: #999;
+}
+.vip-icon {
+  width: 32rpx;
+  padding-right: 8rpx;
+}
+.pay-info {
+  padding-bottom: 20rpx;
+  text-align: left;
+}
+.pay-info .title {
+  padding: 32rpx 0 24rpx;
+  font-size: 30rpx;
+}
+.pay-info .info {
+  color: #999;
+  font-size: 28rpx;
+}
+button {
+  height: 80rpx;
+  margin-top: 30rpx;
+  font-size: 32rpx;
+  background: #fe7276;
+}
+.button-hover,
+button[type=primary] {
+  background: #fe7276 !important;
+}

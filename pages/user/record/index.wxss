@@ -1,0 +1,49 @@
+/* pages/user/record/index.wxss */
+.record-item {
+  padding: 0 29.3333rpx 0 50.6667rpx;
+  border-bottom: 1px solid #f2f3f2;
+  background: #fff;
+  overflow: hidden;
+}
+.user-info {
+  display: table;
+  padding: 9px 0;
+  float: left;
+}
+.user-info-left {
+  position: relative;
+  width: 120rpx;
+  height: 120rpx;
+  margin-right: 8px;
+  border-radius: 100%;
+  background: #eee;
+  overflow: hidden;
+}
+.user-info-left>image {
+  width: 100%;
+  border-radius: 100%;
+}
+ .user-info-left .img-set-expend {
+  position: absolute;
+  top: 10px;
+  left: -5px;
+  transform: scale(1.6);
+} 
+.user-info-right {
+  display: table-cell;
+  vertical-align: middle;
+}
+.user-info-right .type {
+  font-size: 30rpx;
+}
+.user-info-right .time {
+  margin-top: 4px;
+  color: #999;
+  font-size: 24rpx;
+}
+ .right-txt {
+  margin: 26px 10px 0 0;
+  float: right;
+  font-size: 32rpx;
+  color: #fec172;
+}

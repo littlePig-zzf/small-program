@@ -1,0 +1,77 @@
+.book-list {
+  background: #f5f5f5;
+  font-size: 0; 
+}
+.list-item {
+  margin-top: 10px;
+}
+.list-item:first-child {
+  margin-top: 0;
+}
+.list-item-poster {
+  display: inline-block;
+  margin-bottom: 0;
+  width: 100%;
+  min-height: 300rpx;
+  background: #f2f3f2;
+}
+.head {
+  padding: 20rpx;
+  color: #999;
+  background: #fff;
+}
+.head-tag {
+  padding: 2px;
+  margin-right: 2px;
+  color: #fff;
+  border-top-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  background: #fdd791;
+  font-size: 22rpx;
+  -webkit-text-size-adjust: none !important;
+  transform: scale(0.8);
+  -webkit-transform: scale(0.8);
+}
+.head-title {
+  display: inline-block;
+  padding-left: 5px;
+  font-size: 30rpx;
+  color: #323232;
+  font-weight: 700;
+}
+.head-read {
+  float: right;
+  font-size: 30rpx;
+  margin-top: 5rpx;
+}
+.list-item .update-info {
+  padding: 20rpx;
+  background: #fff;
+  overflow: hidden;
+}
+.update-info text {
+  vertical-align: middle
+}
+.update-info .update {
+  float: left;
+  font-size: 28rpx;
+}
+.update-info image {
+  width: 20px;
+  padding-right: 5px;
+  vertical-align: middle; 
+}
+.update-info .read-detail {
+  float: right;
+  font-size: 24rpx;
+}
+.read-detail .tool-icon {
+  display: inline-block;
+  padding-right: 26.6667rpx;
+}
+.read-detail .tool-icon image {
+  width: 14px;
+}
+.read-detail .tool-icon:last-child {
+  padding-right: 0;
+}

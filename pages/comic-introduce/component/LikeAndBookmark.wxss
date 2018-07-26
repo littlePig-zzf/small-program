@@ -1,0 +1,27 @@
+/* pages/book-introduce/LikeAndBookmark.wxss */
+.tool-default-set {
+  display: inline-block;
+  margin-right: 10px;
+  padding: 2.3333rpx 29.3333rpx 5.3333rpx;
+  border-radius: 15px;
+  color: #fff;
+  background: #fe7276;
+}
+.tool-default-set.greyBg {
+  background: #999;
+}
+.tool-default-set:last-child {
+  margin-right: 0;
+}
+
+.tool-default-set .store-icon,
+.tool-default-set .good-icon {
+  width: 12px;
+  height: 12px;
+  padding-top: 5px;
+}
+.tool-default-set .icon-text {
+  display: inline-block;
+  padding: 2px 0 1px 5px;
+  vertical-align: top;
+}

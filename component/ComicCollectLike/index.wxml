@@ -1,0 +1,13 @@
+<!--component/ReadBookCollectLike/index.wxml-->
+<view>
+  <view bindtap="toggleLike" data-index="0" data-which="is_liked" class="text-set {{comicDetail.is_liked ? 'redColor':''}}"> 
+    <image hidden="{{comicDetail.is_liked}}" src="/images/good1.png" alt="" mode="widthFix"/>
+    <image hidden="{{!comicDetail.is_liked}}" src="/images/good1_active.png" alt="" mode="widthFix"/>
+    {{comicDetail.likes === 0 ? '' : comicDetail.likes}}赞
+  </view>
+  <view bindtap="toggleBookmark" data-index="1" data-which="is_bookmarked" class="text-set {{comicDetail.is_bookmarked ? 'redColor':''}}">
+    <image hidden="{{comicDetail.is_bookmarked}}" src="/images/store1.png" alt="" mode="widthFix"/>
+    <image hidden="{{!comicDetail.is_bookmarked}}" src="/images/store1_active.png" alt="" mode="widthFix"/>
+    {{comicDetail.is_bookmarked ? '已收藏' : '收藏'}}
+  </view>
+</view>

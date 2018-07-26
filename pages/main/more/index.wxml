@@ -1,0 +1,4 @@
+<!--pages/main/index.wxml-->
+<view>
+  <comic-list bookList="{{bookList}}" showDetail="{{false}}" hasData="{{bookList.length > 0}}"></comic-list>
+</view> 

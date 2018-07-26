@@ -1,0 +1,83 @@
+/* pages/main/clarify/index.wxss */
+.book-module {
+  min-height: 100vh;
+}
+.clarify-tag {
+  padding: 26.6667rpx;
+  font-size: 28rpx;
+  color: #999;
+  /* background: #fff; */
+}
+.clarify-tag-item {
+  height: 24px;
+  display: inline-block;
+  padding: 0 20rpx;
+  margin: 0 8rpx 37.3333rpx 8rpx;
+  text-align: center;
+  line-height: 24px;
+  border-radius: 20px;
+}
+.clarify-tag-item:first-child {
+  margin-left: 0;
+}
+.clarify-tag-item.active {
+  color: #fff;
+}
+.clarify-cont {
+  background: #f5f5f5;
+  padding: 24rpx 0 0;
+}
+.clarify-cont .cont-item {
+  padding: 26.6667rpx;
+  background: #fff;
+  border-bottom: 1px solid #f5f5f5;
+  font-size: 0;
+}
+.cont-item .cont-left {
+  display: table-cell;
+  width: 190rpx;
+  margin-top: 15rpx;
+}
+.cont-left .cover {
+  width: 100%;
+  min-height: 140rpx;
+}
+.cont-item .cont-right {
+  position: relative;
+  width: 480rpx;
+  padding-left: 26.6667rpx;
+  display: table-cell;
+  vertical-align: top;
+}
+.title {
+  display: inline-block;
+  width: 310rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  margin-bottom: 10rpx;
+  font-size: 30rpx;
+}
+.tips {
+  position: absolute;
+  top: 5rpx;
+  right: 0;
+  color: #999;
+  font-weight: normal;
+  font-size: 28rpx;
+}
+.update-time {
+  margin-bottom: 45rpx;
+  color: #999;
+  font-size: 26rpx;
+}
+.tag {
+  position: absolute;
+  bottom: 0;
+  padding: 0 10px;
+  font-size: 24rpx;
+  font-weight: normal;
+  border-radius: 10px;
+  border: 1px solid #fec172;
+  color: #fec172;
+}

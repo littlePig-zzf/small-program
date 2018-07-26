@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "chapter-list": "/component/ChapterList/index",
+    "subscribe-modal": "/component/SubscribeModal/index"
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "pages": [
+    "pages/main/index/index",
+    "pages/main/clarify/index",
+    "pages/main/more/index",
+    "pages/comic-introduce/index",
+    "pages/bookself/index",
+    "pages/comic-detail/index",
+    "pages/search-page/index",
+    "pages/user/pay/index",
+    "pages/user/contact/index",
+    "pages/user/index/index",
+    "pages/main/chapter-buy/index",
+    "pages/main/rank/index",
+    "pages/user/record/index"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "backgroundColor": "#fe7276",
+    "navigationBarBackgroundColor": "#fe7276",
+    "navigationBarTitleText": "漫画剧透社",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "backgroundColor": "#fff",
+    "color": "#999999",
+    "selectedColor": "#fe7276",
+    "list": [
+      {
+        "pagePath": "pages/main/index/index",
+        "iconPath": "images/foot1.png",
+        "selectedIconPath": "images/foot1_active.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/main/clarify/index",
+        "iconPath": "images/foot2.png",
+        "selectedIconPath": "images/foot2_active.png",
+        "text": "分类"
+      },
+      {
+        "pagePath": "pages/bookself/index",
+        "iconPath": "images/foot3.png",
+        "selectedIconPath": "images/foot3_active.png",
+        "text": "书架"
+      },
+      {
+        "pagePath": "pages/user/index/index",
+        "iconPath": "images/foot4.png",
+        "selectedIconPath": "images/foot4_active.png",
+        "text": "我的"
+      }
+    ]
+  }
+}

@@ -1,0 +1,23 @@
+/* pages/user/contact/index.wxss */
+.contact-module {
+  height: 100vh;
+  background: #fff;
+  text-align: center;
+}
+.code {
+  width: 500rpx;
+  height: 500rpx;
+  margin: 72rpx auto 0;
+  padding: 5px;
+  border: 1px solid #fe7276;
+  border-radius: 15px;
+}
+.code image {
+  width: 100%;
+}
+.wechat {
+  margin: 21.3333rpx 0;
+}
+.info {
+  color: #999;
+}

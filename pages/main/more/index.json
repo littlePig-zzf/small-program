@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "comic-list": "/component/ComicList/index"
+  }
+}

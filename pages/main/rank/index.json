@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "recommend": "/component/Recommend/index",
+    "comic-list": "/component/ComicList/index",
+    "tab-and-search": "/component/TabAndSearch/index"
+  }
+}

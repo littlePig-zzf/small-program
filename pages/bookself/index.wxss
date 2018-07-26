@@ -1,0 +1,180 @@
+/* pages/book/index.wxss */
+.tab-group {
+  background: #fe7276;
+  height: 44px;
+  color: #fff;
+  border-bottom: 1px solid #eee;
+}
+.tab-cont {
+  position: relative;
+  display: flex;
+  width: 60%;
+  margin: 0 auto;
+}
+.tab-item {
+  display: block;
+  flex: 1;
+  width: 100%;
+  height: 100%;
+  line-height: 44px;
+  text-align: center;
+  color: #ffb6b8;
+}
+.tab-item.active {
+  color: #fff;
+}
+.tab-positionL {
+  left: 50%;
+  right: 0;
+}
+.tab-positionR {
+  right: 50%;
+  left: 0;
+}
+.tab-item-transition {
+  transition: right .3s cubic-bezier(.35,0,.25,1) .09s,left .3s cubic-bezier(.35,0,.25,1);
+}
+.tab-bar {
+  position: absolute;
+  bottom: -1rpx;
+  height: 4px;
+}
+.tab-bar .tab-bar-inner {
+  width: 60px;
+  height: 100%;
+  margin: auto;
+  background: #fff;
+}
+.edit-icon {
+  position: absolute;
+  top: 24rpx;
+  right: 40rpx;
+  color: #fff;
+  z-index: 10;
+  cursor: pointer;
+}
+.edit-txt {
+  display: inline-block;
+  margin: 3rpx 8rpx 0 0;
+  vertical-align: top;
+  color: #fff;
+}
+.edit {
+  width: 36rpx;
+  padding-left: 6rpx;
+}
+.book-list {
+  width: 100%;
+  overflow: hidden;
+  background: #fff;
+}
+.book-item {
+  position: relative;
+  padding: 26.6667rpx;
+  border-bottom: 1rpx solid #f2f3f2;
+  overflow: hidden;
+  width: max-content;
+  font-size: 0;
+}
+.book-list .book-item-inner {
+  display: inline-block;
+}
+.item-inner-width {
+  width: 490rpx;
+}
+.checkIcon {
+  width: 38rpx;
+}
+.title {
+  width: 310rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.historyTitle {
+  width: 370rpx;
+}
+.info {
+  padding: 10rpx 0;
+  margin-bottom: 50rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: #999;
+}
+.num {
+  position: absolute;
+  right: 26.67rpx;
+  top: 31rpx;
+  color: #999;
+}
+.continue {
+  position: absolute;
+  bottom: 26.6667rpx;
+  display: inline-block;
+  padding: 0 20rpx;
+  margin-top: 10rpx;
+  border-radius: 10px;
+  border: 1rpx solid #fe7276;
+}
+.book-item-inner.poster {
+  width: 190rpx;
+  margin-right: 16rpx;
+  margin-left: -52rpx;
+  margin-top: 12rpx;
+  min-height: 140rpx;
+  vertical-align: middle;
+  transition: all .3s linear;
+}
+.book-item-inner.poster image {
+  width: 100%;
+  min-height: 140rpx;
+}
+.book-item-inner.showCheck {
+  margin-left: 0;
+}
+.book-item-inner:first-child {
+  padding-right: 13.3333rpx;
+  margin-top: -15rpx;
+  vertical-align: middle;
+}
+.book-item-inner:last-child {
+  width: 490rpx;
+  vertical-align: top;
+}
+.book-list-foot {
+  position: fixed;
+  bottom: -92rpx;
+  height: 88rpx;
+  width: 100%;
+  background: #fff;
+  font-size: 0;
+  transition: all .3s linear;
+}
+.book-list-foot.offsetTop {
+  bottom: 0;
+}
+.foot-item {
+  display: inline-block;
+  width: 50%;
+  height: 100%;
+  line-height: 88rpx;
+  text-align: center;
+  border-top: 1px solid #f2f3f2;
+  box-sizing: border-box;
+}
+.foot-item:first-child {
+  border-right: 1px solid #f2f3f2;
+}
+.foot-item .delIcon {
+  width: 32rpx;
+}
+.foot-item .delIcon,
+.foot-item .checkIcon {
+  padding-right: 5px;
+  margin-top: -3px;
+  vertical-align: middle;
+}
+.foot-item text {
+  vertical-align: middle;
+}

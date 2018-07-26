@@ -1,0 +1,118 @@
+/**index.wxss**/
+.main-box {
+  background: #fff;
+}
+swiper {
+  height: 470rpx;
+}
+.home-swiper-box {
+  width: 100%;
+  z-index: 1;
+}
+.home-swiper-box .slide-image {
+  width: 100%;
+}
+.home-swiper-box .setPosition {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 9999
+}
+.home-artical-type {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  margin: 40rpx 0;
+  color: #323232;
+  font-size: 28rpx;
+}
+.home-type-item {
+  width: 20%;
+  flex: 1;
+  /* font-weight: 600; */
+}
+.home-type-image {
+  width: 90rpx;
+}
+.home-content-box .all-book {
+  vertical-align: middle;
+  text-align: center;
+}
+.all-book .more-btn {
+  width: 16px;
+  height: 22px;
+  padding: 10rpx 12rpx 0 0;
+  vertical-align: top;
+}
+.home-content-box .more-txt {
+  font-size: 28rpx;
+}
+.home-book-item {
+  margin-bottom: 66rpx;
+}
+
+.head-box {
+  width: 100%;
+  margin: 22.6667rpx 0 29.3333rpx;
+}
+.head-box .free-item {
+  display: inline-block;
+  padding-left: 13.3333rpx;
+  border-left: 2px solid #f49146;
+  color: #f49146;
+  font-size: 34rpx;
+}
+.head-box .more-btn {
+  float: right;
+  padding: 0 13.3333rpx;
+  margin-top: 10rpx;
+  border-radius: 12px;
+  border: 1rpx solid #f49146;
+  font-size: 22rpx;
+  color: #f49146;
+}
+.book-item {
+  padding: 18.6667rpx 0 0;
+}
+.book-item .item-cont {
+  display: inline-block;
+  width: 348rpx;
+  margin-right: 16rpx;
+  margin-bottom: 26.6667rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.book-item .item-cont .poster {
+  width: 100%;
+  height: auto;
+  background: #eee;
+}
+.item-cont .poster-title {
+  width: 100%;
+  white-space: nowrap;
+  font-size: 30rpx;
+}
+.item-cont .poster-subtitle {
+  display: block;
+  padding-top: 2px;
+  font-size: 22rpx;
+  color: #999;
+}
+.item-cont:nth-child(2n + 2) {
+  margin-right: 0;
+}
+/* 搜索框 */
+.home-search-position {
+  top: 52rpx;
+}
+.home-search-icon-box {
+  top: 60rpx;
+}
+.home-search-icon-set {
+  width: 14px;
+}
+.home-search-icon-bg {
+  background: rgba(0,0,0,.8);
+}

@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "head-bar": "/component/HeadBar/index",
+    "Comic-collect-like": "/component/ComicCollectLike/index",
+    "subscribe-modal": "/component/SubscribeModal/index"
+  }
+}

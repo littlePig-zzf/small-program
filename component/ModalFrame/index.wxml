@@ -1,0 +1,7 @@
+<!--pages/user/index/modal.wxml-->
+<view animation="{{animationData}}" hidden="{{!isShow}}" class='modal'>
+  <view data-type="mask" catchtap='hideModal' class='modal-mask'></view>
+  <view class='modal-layer'>
+    <slot></slot>
+  </view>
+</view>
