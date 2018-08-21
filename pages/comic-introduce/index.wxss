@@ -140,24 +140,22 @@
   bottom: 0;
   height: 88rpx;
   width: 100%;
+  padding: 0 26.6667rpx;
   background: #fff;
   font-size: 0;
+  box-sizing: border-box;
+  text-align: center;
+  white-space: nowrap;
 }
-.introduce-foot .foot-item {
-  position: absolute;
-  bottom: 0;
+.introduce-foot .read-now {
   display: inline-block;
-  width: 50%;
-  height: 100%;
-  line-height: 88rpx;
+  width: 294rpx;
+  height: 56rpx;
+  margin-top: 16rpx;
+  line-height: 56rpx;
   font-size: 30rpx;
   text-align: center;
-  color: #323232;
-}
-.foot-item:first-child {
-  left: 0;
-}
-.foot-item.start {
-  right: 0;
+  background: #fe7276;
   color: #fff;
+  border-radius: 28rpx;
 }

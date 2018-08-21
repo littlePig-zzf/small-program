@@ -8,9 +8,6 @@
             <image class='home-icon' src="/images/home.png" alt="" mode="widthFix"/>
           </view> 
         </view>
-        <view class="tool-right fr">
-           <like-and-bookmark id="likeAndBookmark"></like-and-bookmark>
-        </view>
       </view>
       <view class="book-poster-text">
         <view class='book-poster-text-inner'>
@@ -57,10 +54,10 @@
     </view>
     <view class='grey-bg'></view>
   </view>
-
-  <view class="introduce-foot primary-text-color">
-    <view class='foot-item' bindtap='goSubscribeBuy'>订阅购买</view>
-    <view class="foot-item start theme-bg-color" bindtap='startRead'>开始阅读</view>
+  
+  <view class="introduce-foot">
+    <like-and-bookmark id="likeAndBookmark"></like-and-bookmark>
+    <view class="read-now" bindtap='startRead'>开始阅读</view>
   </view>
 
   <subscribe-modal hidden="{{isHideModal}}" userInfo="{{userInfo}}"></subscribe-modal>

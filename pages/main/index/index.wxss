@@ -24,14 +24,13 @@ swiper {
   display: flex;
   flex-direction: row;
   text-align: center;
-  margin: 40rpx 0;
+  margin: 40rpx 0 34rpx;
   color: #323232;
   font-size: 28rpx;
 }
 .home-type-item {
   width: 20%;
   flex: 1;
-  /* font-weight: 600; */
 }
 .home-type-image {
   width: 90rpx;

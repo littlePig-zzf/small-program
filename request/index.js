@@ -71,7 +71,6 @@ function axiosHandler(url, params, successCallback, failCallback, completeCallba
     header: {
       'X-CSRF-TOKEN': 'rOT0p6y00zqaiYC4t8Uyhxc1NknD5x1X1DfH0eKy',
       'X-Requested-With': 'XMLHttpRequest',
-      'content-type': 'application/x-www-form-urlencoded',
       'Cookie': 'openid=eyJpdiI6IlRjWUI5clArT3VcL3FQXC8wb2tIRGR4Zz09IiwidmFsdWUiOiJRV21zSStHa0kwVEFjNEFZZzhGdjZDXC9IeGZsTFF6RDhkTGFwUWpQV2s2UTRPWll0NXBVdGZENmM4MzJNQU1GViIsIm1hYyI6IjY0ZWVlZTdlMTFmNGQyMjUzN2MyNDUyZjQyYTYwNDVlNjlkMGI3ZGVmZjIwMDE5MDhkM2Y2MzI2YTVmOGE3MGMifQ%3D%3D; XSRF-TOKEN=eyJpdiI6ImcwTkVHbWZ0eVwvd2lud2hvSnpFU25BPT0iLCJ2YWx1ZSI6IlJtclc0NndoNG9RbjIwWVl5UjVLQzNPeklGNnYySGdSVnNSZ0lPbjBFYmNhWThqc0FsNzBuQlZzVm5hMHNaY1RUWDh4MDlNdGgrZm55RXJPdExVTkxnPT0iLCJtYWMiOiJlNjAzNzc0YjBkNTczNjg3Zjk4MmYyNGZjNmEwYjM1YzRhNTM2NGEyNzE5ZGZhNzBmNmI0NGNjMWU0NTQyYmRhIn0%3D; laravel_session=eyJpdiI6IjlpUXlrSTB6dGNUM2crWDM5VkJjK3c9PSIsInZhbHVlIjoiZnlxTHZ3aHZwMXlZV2Y1bzFyS3ZRNzJ4c25uc3g4TWdaRmhSdW1QcmhpVmNLSHY2MlFsaU1NTkNaVjNLK2NjNGQ1bUVOdXpVNDlucWM0Y1k3TmVcLyt3PT0iLCJtYWMiOiI2NzBlMjQxYWRmYmQwYjM2NDFkYWVmYzYyODRmOGY2ZGU4MDUzM2E3YWI4YTRlMTI0NDY1MGJkYjE2N2UxNTU4In0%3D'
     },
     success (res) {    

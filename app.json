@@ -3,9 +3,9 @@
     "pages/main/index/index",
     "pages/main/clarify/index",
     "pages/main/more/index",
-    "pages/comic-introduce/index",
     "pages/bookself/index",
     "pages/comic-detail/index",
+    "pages/comic-introduce/index",
     "pages/search-page/index",
     "pages/user/pay/index",
     "pages/user/contact/index",
@@ -18,7 +18,7 @@
     "backgroundTextStyle": "light",
     "backgroundColor": "#fe7276",
     "navigationBarBackgroundColor": "#fe7276",
-    "navigationBarTitleText": "漫画剧透社",
+    "navigationBarTitleText": "光速漫画",
     "navigationBarTextStyle": "white"
   },
   "tabBar": {

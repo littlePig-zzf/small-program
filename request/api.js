@@ -1,4 +1,5 @@
-const API_PATH = 'https://test-manhua.alaskamob.com'
+const API_PATH = 'https://comic.alaskamob.com/1'
+// const API_PATH = 'https://test-manhua.alaskamob.com/1'
 const API_FULL = API_PATH + '/api/v1/'
 export const SERVER_URL = API_FULL
 

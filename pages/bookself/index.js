@@ -96,15 +96,16 @@ Page({
   },
 
   deleteFun () {
-    let arr = [];
+    let arr = []
     this.data.bookData.map((item) => {
       if (item.isCheck) {
         arr.push(item.id)
       }
     })
     this.setData({
-      comic_ids: arr
+      comic_ids: Array.from(arr)
     })
+    console.log(typeof this.data.comic_ids)
     if (arr.length === 0) {
       wx.showModal({
         content: '请至少选择一项',
