@@ -57,7 +57,6 @@ Component({
     },
 
     _toggleModal: function () {
-      console.log('-=-=')
       if (!this.data.animated) {
         this.setData({
           isShow: !this.data.isShow

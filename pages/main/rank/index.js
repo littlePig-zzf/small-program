@@ -17,9 +17,9 @@ Page({
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function (options) {
+  onLoad: function ({index}) {
     this.setData({
-      id: Number(options.index) + 1
+      id: Number(index) + 1
     })
     this.fetchData()
   },
@@ -35,9 +35,10 @@ Page({
   },
 
   recommedData (date) {
-    if (this.data.recommend[date] && this.data.recommend[date].length) {
+    const { recommend } = this.data
+    if (recommend[date] && recommend[date].length) {
       this.setData({
-        comicData: this.data.recommend[date]
+        comicData: recommend[date]
       })
       return
     }
@@ -50,8 +51,8 @@ Page({
     })   
   },
 
-  setDate (e) {
-    this.recommedData(e.detail);
+  setDate ({detail}) {
+    this.recommedData(detail);
   },
 
   setCur({detail: select}) {

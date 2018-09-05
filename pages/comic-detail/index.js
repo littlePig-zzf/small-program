@@ -20,9 +20,9 @@ Page({
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function (options) {
+  onLoad: function ({id}) {
     this.setData({
-      id: options.id
+      id: id
     })
     this.fetchChapter()
   },
@@ -48,10 +48,10 @@ Page({
   },
 
   fetchComicData () {
-    app.$http(app.api.home.comicDetail, this.data.comicId, (res) => {
-      app.globalData.comic = res.data
+    app.$http(app.api.home.comicDetail, this.data.comicId, ({data}) => {
+      app.globalData.comic = data
       this.setData({
-        comic: res.data
+        comic: data
       })
     })
   },
@@ -77,22 +77,21 @@ Page({
     })
   },
 
-  isPaided (res, e) {
-    if (res.data.is_paid) {
+  isPaided ({data}, e) {
+    if (data.is_paid) {
       if (e) {
         this.setData({
           chapters: []
         })
       }
       this.setData({
-        chapters: this.data.chapters.concat([res.data]),
-        comicId: res.data.comic_id
+        chapters: this.data.chapters.concat([data]),
+        comicId: data.comic_id
       })
-    } else if (!res.data.is_paid) {
+    } else if (!data.is_paid) {
       this.setData({
         isHideModal: false
       })
-      return
     }
   },
 
@@ -131,11 +130,12 @@ Page({
   },
 
   getNextId () {
+    const { comic } = this.data
     const { length: len } = this.data.chapters
-    const { length: comicLen } = this.data.comic.chapters
+    const { length: comicLen } = comic.chapters
     const currentId = this.data.chapters[len - 1].id
-    const currentI = app.utils.findIndex(this.data.comic.chapters, Number(currentId))
-    const nextId = this.data.comic.chapters[currentI + 1].id
+    const currentI = app.utils.findIndex(comic.chapters, Number(currentId))
+    const nextId = comic.chapters[currentI + 1].id
     this.setData({
       id: nextId
     })
@@ -151,10 +151,10 @@ Page({
     })
   },
 
-  bookmarkHandle (params) {
+  bookmarkHandle({ detail }) {
     const setBookmarked = 'comic.is_bookmarked'
     this.setData({
-      [setBookmarked]: params.detail
+      [setBookmarked]: detail
     })
   },
 

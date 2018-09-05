@@ -16,8 +16,7 @@ Page({
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function (options) {
-    const id = options.id || ''
+  onLoad: function ({id} = '') {
     this.fetchData(id)
   },
 
@@ -29,16 +28,16 @@ Page({
   },
 
   fetchData (id) {
-    app.$http(app.api.user.topup, { chapter_id: id }, (res) => {
+    app.$http(app.api.user.topup, { chapter_id: id }, ({data}) => {
       this.setData({
-        topupData: res.data
+        topupData: data
       })
     })
   },
 
-  selectPay (e) {
+  selectPay({ currentTarget: { dataset} }) {
     this.setData({
-      curType: e.currentTarget.dataset.index
+      curType: index
     })
   },
 })

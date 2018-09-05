@@ -6,8 +6,6 @@ Page({
    * 页面的初始数据
    */
   data: {
-    charterId: '',
-    curMoney: 0,
     curTab: 0,
     isHideModal: true,
     comicDetail: {},
@@ -38,13 +36,15 @@ Page({
   handleFun(e) {
     const dataset = e.currentTarget.dataset
     const { index:curIndex, types:curType } = dataset
+    const { comicDetail } = this.data.comicDetail
     const url = curIndex ? '/bookmark' : '/like'
     const setFeild = 'comicDetail.' + curType
     this.setData({
-      [setFeild]: !this.data.comicDetail[curType]
+      [setFeild]: !comicDetail[curType]
     })
-    const api = this.data.comicDetail[curType] ? 'comic' : 'deleteComic'
-    app.$http(app.api.common[api], this.data.comicDetail.id+url, (res)=>{
+    const api = comicDetail[curType] ? 'comic' : 'deleteComic'
+    console.log(comicDetail.id, 'id')
+    app.$http(app.api.common[api], comicDetail.id+url, (res)=>{
       console.log(res.data)
     })
   },

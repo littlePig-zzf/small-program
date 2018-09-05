@@ -17,10 +17,9 @@ Component({
       let id = ''
       if(typeof e === 'number') id = e
       else id = e.currentTarget.id
-      app.$http(app.api.home.chapters, id, (res)=>{
-        console.log(res)
-        app.globalData.chapterId = res.data.id
-        this.triggerEvent('getDialogData', res.data)
+      app.$http(app.api.home.chapters, id, ({data})=>{
+        app.globalData.chapterId = id
+        this.triggerEvent('getDialogData', data)
       })
     }
   }

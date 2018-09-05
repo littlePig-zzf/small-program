@@ -21,10 +21,9 @@ Page({
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function (options) {
-    console.log(options)
+  onLoad: function ({ comicId }) {
     this.setData({
-      comicId: options.comicId
+      comicId: comicId
     })
     this.getComicAllChapter()
   },

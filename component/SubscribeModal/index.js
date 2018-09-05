@@ -15,7 +15,7 @@ Component({
   data: {
     // 这里是一些组件内部数据
     checkIcon: ['/images/check.png', '/images/checked.png'],
-    isCheck: false
+    isCheck: true
   },
   methods: {
     // 这里是一个自定义方法

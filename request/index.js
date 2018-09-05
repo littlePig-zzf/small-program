@@ -11,7 +11,6 @@ function toastShow(msg, time = 2000) {
 function errorHandler(error) {
   const {data, statusCode} = error
   const {code, message} = (data && data.errors) || {}
-  console.log(statusCode === 419)
   if (statusCode === 200) {
     return
   }

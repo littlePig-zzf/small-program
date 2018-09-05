@@ -15,19 +15,18 @@ Page({
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function (options) {
+  onLoad: function ({ query }) {
     this.setData({
-      operateType: Number(options.query)
+      operateType: Number(query)
     })
     this.fetchData()
   },
 
   fetchData() {
     const url = this.data.operateType === 1 ? 'income' : 'expend'
-    app.$http(app.api.user[url], { page: this.data.page }, (res) => {
-      const { last_page } = res.meta
+    app.$http(app.api.user[url], { page: this.data.page }, ({ meta: { last_page }, data }) => {
       this.setData({
-        recordData: this.data.recordData.concat(res.data),
+        recordData: this.data.recordData.concat(data),
         last_page: last_page
       })
     })

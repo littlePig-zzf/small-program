@@ -10,7 +10,7 @@
       </view>
       <view class="buy-tips">
         <view class='check-item' bindtap='checkFun'>
-          <image src="{{userInfo.user.auto_buy_chapter ? checkIcon[1] : checkIcon[0]}}" mode="widthFix"/>
+          <image src="{{isCheck ? checkIcon[1] : checkIcon[0]}}" mode="widthFix"/>
           余额充足时点击下一话自动扣费，不再提示
         </view>
       </view>

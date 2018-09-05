@@ -39,8 +39,8 @@ Component({
       const url = '/pages/search-page/index'
       app.utils.navigateTo(url)
     },
-    search (e) {
-      this.triggerEvent('search', e.detail.value)
+    search({ value }) {
+      this.triggerEvent('search', value)
     }
   }
 })

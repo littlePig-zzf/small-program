@@ -14,11 +14,11 @@ Page({
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function (options) {
+  onLoad: function ({ id, keyword }) {
     // options可获取路由参数
     this.setData({
-      id: options.id || '',
-      keyword: options.keyword || ''
+      id: id || '',
+      keyword: keyword || ''
     })
     this.fetchData()
   },

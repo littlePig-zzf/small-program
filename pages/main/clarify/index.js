@@ -24,10 +24,10 @@ Page({
     this.fetchData()
   },
 
-  setActiveTag (e) {
-    let key = e.target.dataset.key
-    let id = e.target.id
-    let i = e.target.dataset.i
+  setActiveTag({ target }) {
+    let key = target.dataset.key
+    let id = target.id
+    let i = target.dataset.i
     let tabData = 'tabData[' + i + '].val'
     this.setData({
       [tabData]: id,
@@ -41,22 +41,22 @@ Page({
   },
 
   fetchCategoryData () {
-    app.$http(app.api.home.category, (res)=>{
-      res.data.map((item) => {
+    app.$http(app.api.home.category, ({data})=>{
+      data.map((item) => {
         item.val = -1
         this.data.queryParams[item.key] = -1
       })
       this.setData({
-        tabData: res.data
+        tabData: data
       })
     })
   },
 
   fetchData () {
-    app.$http(app.api.home.comicList, this.data.queryParams, (res)=>{
-      const { last_page } = res.meta
+    app.$http(app.api.home.comicList, this.data.queryParams, ({meta, data})=>{
+      const { last_page } = meta
       this.setData({
-        clarifyData: this.data.clarifyData.concat(res.data),
+        clarifyData: this.data.clarifyData.concat(data),
         last_page: last_page
       })
       if (this.data.clarifyData.length === 0) {
@@ -72,8 +72,8 @@ Page({
     })
   },
 
-  lookDetail (e) {
-    app.utils.navigateTo(`/pages/comic-introduce/index?id=${e.currentTarget.id}`)
+  lookDetail({ currentTarget: {id} }) {
+    app.utils.navigateTo(`/pages/comic-introduce/index?id=${id}`)
   },
 
   /**

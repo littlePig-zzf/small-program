@@ -27,11 +27,11 @@ Page({
   fetchData (isRefresh) {
     const url = this.data.selected === '1' ? 'historyList' : 'likesList'
     const data = this.data.selected === '1' ? 'historyData' : 'likeData'
-    app.$http(app.api.book[url], { page: this.data.page }, (res)=>{
-      const { last_page } = res.meta
+    app.$http(app.api.book[url], { page: this.data.page }, ({meta, data: res})=>{
+      const { last_page } = meta
       this.setData({
-        [data]: isRefresh || this.data.page === 1 ? res.data : this.data[data].concat(res.data),
-        bookData: isRefresh || this.data.page === 1 ? res.data : this.data[data].concat(res.data),
+        [data]: isRefresh || this.data.page === 1 ? res : this.data[data].concat(res),
+        bookData: isRefresh || this.data.page === 1 ? res : this.data[data].concat(res),
         last_page: last_page
       })
     })

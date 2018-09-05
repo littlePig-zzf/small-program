@@ -6,7 +6,6 @@ Page({
    * 页面的初始数据
    */
   data: {
-    showTxt: '搜索漫画名或作者',
     hotData: []
   },
 
@@ -25,8 +24,8 @@ Page({
     })
   },
 
-  search (e) {
-    app.utils.navigateTo(`/pages/main/more/index?keyword=${e.detail}`)
+  search({ detail }) {
+    app.utils.navigateTo(`/pages/main/more/index?keyword=${detail}`)
   },
 
   goBack () {
@@ -35,8 +34,8 @@ Page({
     })
   },
 
-  goToDetail (e) {
-    app.utils.navigateTo(`/pages/comic-introduce/index?id=${e.target.id}`)
+  goToDetail({ target: {id} }) {
+    app.utils.navigateTo(`/pages/comic-introduce/index?id=${id}`)
   }
 
 })

@@ -58,10 +58,9 @@ Page({
     })
   },
 
-  gotoDetail (e) {
-    console.log(e)
-    const { path, index } = e.currentTarget.dataset
-    if (e.currentTarget.dataset.path) {
+  gotoDetail({ currentTarget: { dataset }}) {
+    const { path, index } = dataset
+    if (dataset.path) {
       app.utils.navigateTo(`/pages/user/${path}/index?query=${this.data.menuList[index].query}`)
     }
   },

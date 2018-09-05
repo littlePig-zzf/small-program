@@ -18,22 +18,22 @@ Page({
     })
   },
 
-  lintTo (e) {
-    const data = e.currentTarget.dataset
+  lintTo({ currentTarget }) {
+    const data = currentTarget.dataset
     const which = data.item
     let url = '/pages/'
     if (which === 'type') {
-      url = url + `main/rank/index?index=${data.index}`
+      url += `main/rank/index?index=${data.index}`
     }
     if (which === 'more') {
-      url = url + `main/more/index?id=${e.currentTarget.id}`
+      url += `main/more/index?id=${currentTarget.id}`
     }
     if (which === 'lookDetail') {
-      url = url + `comic-introduce/index?id=${e.currentTarget.id}`
+      url += `comic-introduce/index?id=${currentTarget.id}`
     }
-    if (which === 'poster') {
-      url = `e.target.dataset.url`
-    }
+    // if (which === 'poster') {
+    //   url = `e.target.dataset.url`
+    // }
     
     app.utils.navigateTo(url)
   },
@@ -47,7 +47,7 @@ Page({
   /**
   * 页面相关事件处理函数--监听用户下拉动作
   */
-  onPullDownRefresh: function () {
+  onPullDownRefresh () {
     setTimeout(()=>{
       this.fetchData()
       wx.stopPullDownRefresh();
@@ -57,7 +57,7 @@ Page({
   /**
    * 用户点击右上角分享
    */
-  onShareAppMessage: function () {
+  onShareAppMessage () {
     app.utils.setShare()
   }
 

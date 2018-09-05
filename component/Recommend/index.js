@@ -22,7 +22,6 @@ Component({
     selected: 6,
     date: ['周日', '周一', '周二', '周三', '周四', '周五', '周六'],
     dateArr: [],
-    toView: ''
   },
 
   /**
@@ -65,15 +64,15 @@ Component({
       }) 
     },
 
-    setTab (e) {
+    setTab({currentTarget: { dataset } }) {
       this.setData({
-        selected: e.currentTarget.dataset.index,
-        toScrollView: 'data-' + e.currentTarget.dataset.index
+        selected: dataset.index,
+        toScrollView: 'data-' + dataset.index
       })
 
-      app.globalData.comicSaleTab = e.currentTarget.dataset.v
+      app.globalData.comicSaleTab = dataset.v
       console.log(app.globalData.comicSaleTab)
-      this.triggerEvent('setDate', e.currentTarget.dataset.v)
+      this.triggerEvent('setDate', dataset.v)
     }
   }
 })
