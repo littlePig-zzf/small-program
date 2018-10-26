@@ -47,13 +47,11 @@ export default {
     this.$store.dispatch('setInviteCode', this.inviteCode)
     wx.checkSession({
       success: (r) => {
-        console.log(r, wx.getStorageSync('code'))
       },
       fail: () => {
         wx.login({
           timeout: 1000,
           success: (r) => {
-            console.log(r)
             wx.setStorageSync('code', r.code)
           }
         })
@@ -86,11 +84,10 @@ export default {
         scope: 'scope.werun',
         success: (data) => {
           const {encryptedData, iv} = data
-          const res = this.$api.main.home({
+          this.$api.main.home({
             'encrypted_data': encryptedData,
             'iv': iv
-          })
-          res.then((res) => {
+          }).then((res) => {
             const {data} = res
             Object.assign(this, data)
           })

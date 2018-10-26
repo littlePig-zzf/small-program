@@ -1,6 +1,7 @@
 # mp_run
 
 > A Mpvue project
+> 注意：pages文件夹中的每个页面的js只能是main.js，如果要换其他名字需要修改webpack.base.conf.js中的 pagesEntry属性
 
 ## Build Setup
 

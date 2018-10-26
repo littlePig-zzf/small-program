@@ -41,7 +41,7 @@ export default {
     hideModal () {
       this.$emit('getRunData')
       this.showAlert = false
-      this.gain = ''
+      this.gain = 0
     },
     openPecket (e) {
       if (!e.mp.detail.userInfo) {
@@ -99,9 +99,10 @@ export default {
         }
       })
     },
-    openSetting (e) {
-      this.isAuth.werun = e.mp.detail.authSetting['scope.werun']
-      this.isAuth.userInfo = e.mp.detail.authSetting['scope.userInfo']
+    openSetting ({mp}) {
+      const {detail} = mp
+      this.isAuth.werun = detail.authSetting['scope.werun']
+      this.isAuth.userInfo = detail.authSetting['scope.userInfo']
       this.getRunData()
     },
     getReward () {

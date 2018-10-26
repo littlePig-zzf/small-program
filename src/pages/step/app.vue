@@ -29,9 +29,9 @@ export default {
 
   methods: {
     getStepRecord () {
-      this.$api.main.stepRecord(this.page).then((res) => {
-        this.steps = res.data
-        this.last_page = res.meta.last_page
+      this.$api.main.stepRecord(this.page).then(({data, meta}) => {
+        this.steps = data
+        this.last_page = meta.last_page
       })
     },
     nextPage () {
@@ -53,31 +53,31 @@ export default {
 
 <style lang="less" scoped>
 .step-cont {
-    .step-item {
-      padding: 0 15px 0 25px;
-      border-bottom: 1px solid @border-color;
-      background: #fff;
-      overflow: hidden;
-      .user-info {
-        display: table;
-        padding: 9px 0;
-        float: left;
-        .type {
-            font-size: 14px;
-        }
-        .time {
-            margin-top: 4px;
-            color: #999;
-            font-size: 12px;
-        }
+  .step-item {
+    padding: 0 15px 0 25px;
+    border-bottom: 1px solid @border-color;
+    background: #fff;
+    overflow: hidden;
+    .user-info {
+      display: table;
+      padding: 9px 0;
+      float: left;
+      .type {
+          font-size: 14px;
       }
-      .step-detail {
-        margin: 26px 10px 0 0;
-        float: right;
-        font-size: 16px;
-        color: rgb(247, 117, 117);
+      .time {
+          margin-top: 4px;
+          color: #999;
+          font-size: 12px;
       }
     }
+    .step-detail {
+      margin: 26px 10px 0 0;
+      float: right;
+      font-size: 16px;
+      color: rgb(247, 117, 117);
+    }
+  }
 }
 
 </style>

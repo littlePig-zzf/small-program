@@ -43,11 +43,6 @@ export default {
     return this.shareMessage()
   },
 
-  async onPullDownRefresh () {
-    // 停止下拉刷新
-    await wx.stopPullDownRefresh()
-  },
-
   methods: {
     extractHandle () {
       this.$api.user.withdraw().then((res) => {
