@@ -1,5 +1,0 @@
-<!--component/HeadModule/index.wxml-->
-<view class="head-module" hidden="{{!showBar}}">
-  <text class='title'>{{title}}</text>
-  <text class="remain">剩余 {{remainNum}} 话</text>
-</view>

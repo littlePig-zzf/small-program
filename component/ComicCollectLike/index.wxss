@@ -1,4 +1,0 @@
-/* component/ReadBookCollectLike/index.wxss */
-.redColor {
-  color: #fe7276;
-}

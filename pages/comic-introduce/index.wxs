@@ -1,8 +1,0 @@
-// 判断该漫画是否连载、免费
-var cate = function (is_paid, is_finish) {
-  if (is_paid) return '付费'
-  return is_finish ? '已完结' : '连载中'
-}
-module.exports = {
-  categoryFun: cate
-};

@@ -1,0 +1,30 @@
+{
+  "pages": [
+    "pages/index/main",
+    "pages/user/main",
+    "pages/step/main"
+  ],
+  "window": {
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "步数猫",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "borderStyle": "white",
+    "backgroundColor": "#F8F8F8",
+    "color": "#999999",
+    "selectedColor": "#fe7276",
+    "list": [{
+      "pagePath": "pages/index/main",
+      "text": "首页",
+      "iconPath": "static/images/foot1.png",
+      "selectedIconPath": "static/images/foot1_active.png"
+    }, {
+      "pagePath": "pages/user/main",
+      "text": "我的",
+      "iconPath": "static/images/foot2.png",
+      "selectedIconPath": "static/images/foot2_active.png"
+    }]
+  }
+}

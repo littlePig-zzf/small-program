@@ -1,7 +1,0 @@
-{
-  "usingComponents": {
-    "chapter-list": "/component/ChapterList/index",    
-    "subscribe-modal": "/component/SubscribeModal/index",
-    "like-and-bookmark":"./component/LikeAndBookmark"
-  }
-}

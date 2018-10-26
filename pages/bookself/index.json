@@ -1,6 +1,0 @@
-{
-  "usingComponents": {
-    "tab-and-search": "/component/TabAndSearch/index",
-    "no-data": "/component/NoData/index"
-  }
-}
